@@ -5,7 +5,7 @@ import { ProdutoDto } from './produto.dto';
 
 @Controller('produtos')
 export class ProdutosController {
-    constructor(private produtoService: ProdutosService) {}
+    constructor(private readonly produtoService: ProdutosService) {}
 
     @Get()
     async buscaTodos(): Promise<Produto[]> {
